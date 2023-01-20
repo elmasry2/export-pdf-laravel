@@ -1,12 +1,14 @@
 {{--{{dd('')}}--}}
     <!DOCTYPE html>
-<html>
+    <html >
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" />
+
     <title> {{$title??''}} </title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;900&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&family=Saira:wght@300;400;500;600;700;800;900&display=swap');
+        * { font-family: DejaVu Sans, sans-serif , arial , tahoma !important; }
 
         .report-main-container {
             -webkit-print-color-adjust: exact !important;
@@ -72,7 +74,7 @@
                 <tbody>
                 <tr>
                     <th colspan="2"><img class="person-image" src="{{$left_image}}"> </th>
-                    <th colspan="4" class="main-title">{{$main_title}}</th>
+                    <th colspan="4" class="main-title">{{$main_title}} </th>
                     <th colspan="2"><img class="person-image" src="{{$right_image}}"> </th>
                 </tr>
                 </tbody>
@@ -92,7 +94,7 @@
                     <th width="20px">صنف </th>
                     <th width="50px"> عمر </th>
                     <th width="120px">تام </th>
-                    <th width="50px">سيريل نمبر</th>
+                    <th width="50px">سيريل نمبر </th>
                 </tr>
                 </thead>
 

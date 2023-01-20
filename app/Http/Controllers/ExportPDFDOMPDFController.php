@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use PDF;
-
 class ExportPDFDOMPDFController extends Controller
 {
 
@@ -18,6 +17,7 @@ class ExportPDFDOMPDFController extends Controller
             'right_image'      => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQytZbi7kITvTiF3O6mhRumcP5qD3p7kulmAQ&usqp=CAU',
             'data'             =>  null
         ]);
-        return $pdf->download('exportPDFDOMPDF.pdf');
+//        return $pdf->output();
+        return $pdf->stream('exportPDFDOMPDF.pdf');
     }
 }
