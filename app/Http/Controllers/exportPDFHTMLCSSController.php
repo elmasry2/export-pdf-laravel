@@ -14,8 +14,9 @@ class exportPDFHTMLCSSController extends Controller
         $data['left_image'] = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQytZbi7kITvTiF3O6mhRumcP5qD3p7kulmAQ&usqp=CAU';
         $data['right_image'] = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQytZbi7kITvTiF3O6mhRumcP5qD3p7kulmAQ&usqp=CAU';
         $data['users']=null;
+        // passing data to blade
         $html = view('pdfHTMLCSS',compact('data'))->render();
-
+            // load rendered data from pdf HTML View file and generate PDF fiel 
         $pdf = PDF::loadHTML($html);
         return $pdf
             ->setPaper('a4', 'portrait')
