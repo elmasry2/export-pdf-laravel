@@ -8,10 +8,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$data['title']??''}} </title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" />
+{{--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" />--}}
+    <link rel="stylesheet" href="{{asset('css/pdf.css')}}">
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    {{--    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">--}}
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;900&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&family=Saira:wght@300;400;500;600;700;800;900&display=swap');
@@ -66,8 +68,8 @@
 
 </head>
 
-<body  onload="window.print()">
-{{--<body  >--}}
+{{--<body  onload="window.print()">--}}
+<body  >
 <div class="container-fluid report-main-container">
     <div class="container-fluid report-container">
         <div class="container report-body">

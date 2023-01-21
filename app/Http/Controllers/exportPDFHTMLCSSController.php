@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use PDF;
 
 class exportPDFHTMLCSSController extends Controller
 {
@@ -13,6 +14,18 @@ class exportPDFHTMLCSSController extends Controller
         $data['left_image'] = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQytZbi7kITvTiF3O6mhRumcP5qD3p7kulmAQ&usqp=CAU';
         $data['right_image'] = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQytZbi7kITvTiF3O6mhRumcP5qD3p7kulmAQ&usqp=CAU';
         $data['users']=null;
-        return view('exportPDFHTMLCSS',compact('data'));
+        $html = view('pdfHTMLCSS',compact('data'))->render();
+
+        $pdf = PDF::loadHTML($html);
+        return $pdf
+            ->setPaper('a4', 'portrait')
+            ->setOption(['dpi' => 150, 'defaultFont' => 'sans-serif'])
+            ->setWarnings(false)
+            ->download('invoice.pdf');
+//        $pdf = PDF::loadView('invoice-pdf2');
+//        return $pdf->download('invoice-pdf2.pdf');
+
+//        return view('invoice',compact('data'));
+
     }
 }

@@ -18,6 +18,6 @@ class ExportPDFDOMPDFController extends Controller
             'data'             =>  null
         ]);
 //        return $pdf->output();
-        return $pdf->stream('exportPDFDOMPDF.pdf');
+        return $pdf->download('exportPDFDOMPDF.pdf');
     }
 }

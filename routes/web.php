@@ -16,11 +16,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('invoice');
 });
 Route::get('/exportPDFDOMPDF', function () {
     return view('exportPDFDOMPDF');
 });
-Route::get('/export-to-pdf-html-css', [exportPDFHTMLCSSController::class,'index'])->name('export-to-pdf-html-css');
-Route::get('/export-to-pdf-dompdf',   [ExportPDFDOMPDFController::class,'index'])->name('export-to-pdf-dompdf');
+    Route::get('/exportPDFHTMLCSS', [exportPDFHTMLCSSController::class,'index']);
+//Route::get('/invoice-pdf',   [ExportPDFDOMPDFController::class,'index'])->name('invoice-pdf');
+Route::get('/invoice', function () {
+    // return view('invoice');
 
+    $pdf = PDF::loadView('invoice');
+    return $pdf->download('invoice.pdf');
+});
+Route::get('/invoice-pdf', function () {
+    // return view('invoice-pdf');
+
+    $pdf = PDF::loadView('invoice-pdf');
+    return $pdf
+        ->setPaper('a4', 'portrait')
+        ->setOption(['dpi' => 150, 'defaultFont' => 'sans-serif'])
+         ->setWarnings(false)
+        ->download('invoice.pdf');
+});

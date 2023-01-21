@@ -21,8 +21,8 @@
     <div class="container">
         <h1 class="text-center pt-2"> Export To PDF </h1>
         <div class="block">
-        <a class="btn btn-warning" href="{{route('export-to-pdf-html-css')}}" target="_blank"> Export To PDF Using HTML & CSS </a>
-        <a class="btn btn-success" href="{{route('export-to-pdf-dompdf')}}" > Export To PDF Using domPDF </a>
+        <a class="btn btn-warning" href="{{url('/invoice')}}"> Export To PDF Using HTML & CSS </a>
+        <a class="btn btn-success" href="{{url('/invoice-pdf')}}" > Export To PDF Using domPDF </a>
 
         </div>
     </div>
