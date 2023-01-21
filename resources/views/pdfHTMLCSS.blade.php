@@ -84,7 +84,7 @@
             z-index: 9999;
             inset: 0;
             background:
-                url('data:image/svg+xml;utf8,<svg style="transform:rotate(0deg)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 60 120"><text x="0" y="25" fill="gray"> NA-120 WaterMark </text></svg>')
+                url('data:image/svg+xml;utf8,<svg style="transform:rotate(0deg)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 60 120"><text x="0" y="25" fill="lightgray"> NA-120 WaterMark </text></svg>')
                 0 0/100% 100vh;
         }
 {{--                background-repeat:no-repeat;--}}
@@ -106,7 +106,7 @@
                 z-index: 9999;
                 inset: 0;
                 background:
-                    url('data:image/svg+xml;utf8,<svg style="transform:rotate(0deg)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 60 120"><text x="0" y="25" fill="gray"> NA-120 WaterMark </text></svg>')
+                    url('data:image/svg+xml;utf8,<svg style="transform:rotate(0deg)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 60 120"><text x="0" y="25" fill="lightgray"> NA-120 WaterMark </text></svg>')
                     0 0/100% 100vh;
             }
             @page  { margin: 4px; }
