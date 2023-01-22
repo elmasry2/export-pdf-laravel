@@ -15,14 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('invoice');
-});
-Route::get('/exportPDFDOMPDF', function () {
-    return view('exportPDFDOMPDF');
-});
-    Route::get('/exportPDFHTMLCSS', [exportPDFHTMLCSSController::class,'index']);
-//Route::get('/invoice-pdf',   [ExportPDFDOMPDFController::class,'index'])->name('invoice-pdf');
+//Route::get('/', function () {
+//    return view('invoice');
+//});
+//Route::get('/exportPDFDOMPDF', function () {
+//    return view('exportPDFDOMPDF');
+//});
+    Route::get('/', [exportPDFHTMLCSSController::class,'index']);
+Route::get('/invoice-pdf',   [ExportPDFDOMPDFController::class,'index'])->name('invoice-pdf');
 Route::get('/invoice', function () {
     // return view('invoice');
 

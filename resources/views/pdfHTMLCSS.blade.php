@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16"/>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$data['title']??''}} </title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" />
-{{--    <link rel="stylesheet" href="{{asset('css/pdf.css')}}">--}}
+{{--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" />--}}
+    <link rel="stylesheet" href="{{asset('css/pdf.css')}}">
 
 
 
@@ -60,33 +60,33 @@
             border: 2px solid rgb(0, 0, 0) !important;
         }
 
-        .watermark-image{
-            /*position: absolute !important;*/
-            opacity: .3 !important;
-            top:40% !important;
-            left:35% !important;
-            position:absolute;
-            z-index:-1;
-            display:block;
-            /*top: 50%;*/
-            /*left: 50%;*/
-            margin-top: -50px;
-            margin-left: -50px;
-        }
-        body {
-            min-height: 300vh;
-            position: relative;
-            margin: 0;
-        }
-        body:before {
-            content: "";
-            position: absolute;
-            z-index: 9999;
-            inset: 0;
-            background:
-                url('data:image/svg+xml;utf8,<svg style="transform:rotate(0deg)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 60 120"><text x="0" y="25" fill="lightgray"> NA-120 WaterMark </text></svg>')
-                0 0/100% 100vh;
-        }
+        /*.watermark-image{*/
+        /*    !*position: absolute !important;*!*/
+        /*    opacity: .3 !important;*/
+        /*    top:40% !important;*/
+        /*    left:35% !important;*/
+        /*    position:absolute;*/
+        /*    z-index:-1;*/
+        /*    display:block;*/
+        /*    !*top: 50%;*!*/
+        /*    !*left: 50%;*!*/
+        /*    margin-top: -50px;*/
+        /*    margin-left: -50px;*/
+        /*}*/
+        /*body {*/
+        /*    min-height: 300vh;*/
+        /*    position: relative;*/
+        /*    margin: 0;*/
+        /*}*/
+        /*body:before {*/
+        /*    content: "";*/
+        /*    position: absolute;*/
+        /*    z-index: 9999;*/
+        /*    inset: 0;*/
+        /*    background:*/
+        /*        url('data:image/svg+xml;utf8,<svg style="transform:rotate(-45deg)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 60 70"><text x="0" y="25" fill="lightgray"> NA-120 WaterMark </text></svg>')*/
+        /*        0 0/100% 100vh;*/
+        /*}*/
 {{--                background-repeat:no-repeat;--}}
 {{--background-image: url({{$data['small_watermark']}});--}}
 {{--    background-size: 400px !important;--}}
@@ -95,22 +95,22 @@
 }
         @media  print
         {
-            body {
-                min-height: 300vh;
-                position: relative;
-                margin: 0;
-            }
-            body:before {
-                content: "";
-                position: absolute;
-                z-index: 9999;
-                inset: 0;
-                background:
-                    url('data:image/svg+xml;utf8,<svg style="transform:rotate(0deg)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 60 120"><text x="0" y="25" fill="lightgray"> NA-120 WaterMark </text></svg>')
-                    0 0/100% 100vh;
-            }
+            /*body {*/
+            /*    min-height: 300vh;*/
+            /*    position: relative;*/
+            /*    margin: 0;*/
+            /*}*/
+            /*body:before {*/
+            /*    content: "";*/
+            /*    position: absolute;*/
+            /*    z-index: 9999;*/
+            /*    inset: 0;*/
+            /*    background:*/
+            /*        url('data:image/svg+xml;utf8,<svg style="transform:rotate(-45deg)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 60 70"><text x="0" y="25" fill="lightgray"> NA-120 WaterMark </text></svg>')*/
+            /*        0 0/100% 100vh;*/
+            /*}*/
+
             @page  { margin: 4px; }
-            @page{
         }
 
     </style>
